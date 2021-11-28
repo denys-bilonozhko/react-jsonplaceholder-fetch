@@ -5,6 +5,7 @@
 }
 
 .app {
+  min-height: 100vh;
   font-family: Cabin, sans-serif;
   background-color: #586875;
 }
@@ -16,9 +17,9 @@
 }
 
 .posts {
- display: flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .post {
