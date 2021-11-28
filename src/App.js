@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ApiRequest from './api';
+import './styles/app.css';
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -13,13 +14,15 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      {posts.map((post) => (
-        <div key={post.id}>
-          <h3>{post.title}</h3>
-          <p>{post.body}</p>
-        </div>
-      ))}
+    <div className="app">
+     <div className="posts">
+        {posts.map((post) => (
+          <div className="post" key={post.id}>
+            <h3 className="post__title">{post.title}</h3>
+            <p className="post__body">{post.body}</p>
+          </div>
+        ))}
+     </div>
     </div>
   );
 };

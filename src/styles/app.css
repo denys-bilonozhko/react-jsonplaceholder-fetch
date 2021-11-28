@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 30px;
+  color: #f4f7f7;
+  background-color: #586875;
+}
+
+.posts {
+  max-width: 900px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  min-height: 150px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  color: #586875;
+  text-align: justify;
+  background-color: #f4f7f7;
+  box-shadow: 0 10px 20px #0006;
+}
+
+.post__title {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
