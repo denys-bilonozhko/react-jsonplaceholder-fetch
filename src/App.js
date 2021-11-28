@@ -34,6 +34,10 @@ const App = () => {
     fetchPosts(limit, page);
   };
 
+  const removePost = (post) => {
+    setPosts(posts.filter((p) => p.id !== post.id));
+  };
+
   return (
     <div className="app">
       <div className="container">
@@ -45,7 +49,7 @@ const App = () => {
             <Spinner />
           </div>
         ) : (
-          <PostList posts={filteredPosts} />
+          <PostList posts={filteredPosts} removePost={removePost}/>
         )}
         <Pagination
           page={page}
