@@ -1,7 +1,8 @@
 .button {
   padding: 5px 15px;
-  background-color: #bdd6d2;
   border: 1px solid teal;
-  cursor: pointer;
+  color: #586875;
   font-family: Cabin, sans-serif;
+  cursor: pointer;
+  background-color: #bdd6d2;
 }

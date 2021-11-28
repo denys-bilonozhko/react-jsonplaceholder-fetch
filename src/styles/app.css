@@ -8,6 +8,7 @@
   min-height: 100vh;
   font-family: Cabin, sans-serif;
   background-color: #586875;
+  padding: 20px 0;
 }
 
 .container {
@@ -30,7 +31,6 @@
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 12px;
-  color: white;
   color: #586875;
   text-align: justify;
   background-color: #f4f7f7;

@@ -11,13 +11,15 @@ import { getPageCount } from './utils/pages';
 
 const App = () => {
   const [posts, setPosts] = useState([]);
-  const [fetchPosts, isPostsLoading, postError] = useFetching(async (limit, page) => {
-    const response = await ApiRequest.getAll(limit, page);
-    setPosts(response.data);
-    setPosts(response.data);
-    const totalCount = response.headers['x-total-count'];
-    setTotalPages(getPageCount(totalCount, limit));
-  });
+  const [fetchPosts, isPostsLoading, postError] = useFetching(
+    async (limit, page) => {
+      const response = await ApiRequest.getAll(limit, page);
+      setPosts(response.data);
+      setPosts(response.data);
+      const totalCount = response.headers['x-total-count'];
+      setTotalPages(getPageCount(totalCount, limit));
+    }
+  );
   const [filter, setFilter] = useState({ sort: '', query: '' });
   const [totalPages, setTotalPages] = useState(0);
   const [limit, setLimit] = useState(10);
@@ -41,6 +43,11 @@ const App = () => {
   return (
     <div className="app">
       <div className="container">
+        <h1
+          style={{ color: '#fff', textAlign: 'center', marginBottom: '20px' }}
+        >
+          React Jsonplaceholder Fetch
+        </h1>
         <PostFilter filter={filter} setFilter={setFilter} />
         <hr style={{ margin: '20px 0', width: '100%' }} />
         {postError && <h3>Error: {postError}</h3>}
@@ -49,7 +56,7 @@ const App = () => {
             <Spinner />
           </div>
         ) : (
-          <PostList posts={filteredPosts} removePost={removePost}/>
+          <PostList posts={filteredPosts} removePost={removePost} />
         )}
         <Pagination
           page={page}
