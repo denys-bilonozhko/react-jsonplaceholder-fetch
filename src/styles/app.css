@@ -10,6 +10,7 @@
   width: 100%;
   padding: 30px;
   color: #f4f7f7;
+  font-family: Cabin, sans-serif;
   background-color: #586875;
 }
 
@@ -36,4 +37,14 @@
 .post__title {
   margin-bottom: 10px;
   text-transform: capitalize;
+}
+
+.post__buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.post__buttons button + button {
+  margin-left: 10px;
 }
