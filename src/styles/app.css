@@ -17,6 +17,12 @@
   padding: 0 15px;
 }
 
+.title {
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
 .posts {
   display: flex;
   flex-direction: column;
@@ -76,4 +82,24 @@
 .page__current {
   font-weight: bold;
   background-color: #bdd6d2;
+}
+
+.navbar {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px 0 0;
+  background-color: #bdd6d2;
+}
+
+.navbar__links a {
+  font-family: Cabin, sans-serif;
+  color: #586875;
+  text-decoration: none;
+}
+
+.navbar__links a + a {
+  margin-left: 20px;
 }
